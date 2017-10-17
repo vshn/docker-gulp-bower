@@ -8,4 +8,5 @@ RUN apk --no-cache add \
       python \
       rsync \
       && \
-    npm install --silent -g gulp bower
+    npm install --silent -g gulp bower && \
+    sed -i -e "s/bin\/ash/bin\/bash/" /etc/passwd
